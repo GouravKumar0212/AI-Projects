@@ -1,0 +1,51 @@
+[
+  {
+    "id": "eval_001",
+    "query": "What encryption standard is required for data at rest and how often are keys rotated?",
+    "expected_doc": "company_security_policy.md",
+    "key_phrases": ["AES-256-GCM", "90 days", "CMEK"],
+    "should_answer": true
+  },
+  {
+    "id": "eval_002",
+    "query": "What is the uptime SLA guarantee for the microservice cluster?",
+    "expected_doc": "cloud_architecture_spec.md",
+    "key_phrases": ["99.99%", "availability"],
+    "should_answer": true
+  },
+  {
+    "id": "eval_003",
+    "query": "How quickly must suspected data breaches be reported to the SOC?",
+    "expected_doc": "company_security_policy.md",
+    "key_phrases": ["15 minutes", "SOC"],
+    "should_answer": true
+  },
+  {
+    "id": "eval_004",
+    "query": "What are the rate limit quotas and status code for exceeded requests?",
+    "expected_doc": "cloud_architecture_spec.md",
+    "key_phrases": ["1,000 requests", "429"],
+    "should_answer": true
+  },
+  {
+    "id": "eval_005",
+    "query": "What protocol must be used for network communication across public and internal boundaries?",
+    "expected_doc": "company_security_policy.md",
+    "key_phrases": ["TLS 1.3", "mTLS"],
+    "should_answer": true
+  },
+  {
+    "id": "eval_006",
+    "query": "What is the policy for annual employee travel expense reimbursements?",
+    "expected_doc": null,
+    "key_phrases": [],
+    "should_answer": false
+  },
+  {
+    "id": "eval_007",
+    "query": "What is the recommended recipe for baking sourdough bread?",
+    "expected_doc": null,
+    "key_phrases": [],
+    "should_answer": false
+  }
+]
