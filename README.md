@@ -53,8 +53,8 @@ This application runs natively on:
 
 Clone the repository to your machine first:
 ```bash
-git clone https://github.com/your-username/ask-my-docs.git
-cd ask-my-docs
+git clone https://github.com/GouravKumar0212/AI-Projects.git
+cd AI-Projects
 ```
 
 ---
