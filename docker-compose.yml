@@ -1,0 +1,22 @@
+services:
+  streamlit-ui:
+    build: .
+    container_name: ask-my-docs-ui
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONIOENCODING=utf-8
+    volumes:
+      - ./data/docs:/app/data/docs
+    command: streamlit run app/ui.py --server.port=8501 --server.address=0.0.0.0
+
+  fastapi-backend:
+    build: .
+    container_name: ask-my-docs-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONIOENCODING=utf-8
+    volumes:
+      - ./data/docs:/app/data/docs
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000
