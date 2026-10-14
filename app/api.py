@@ -1,6 +1,11 @@
 import os
+import sys
 import shutil
 from typing import List, Dict, Any, Optional
+
+# Ensure project root is in sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from pydantic import BaseModel, Field
 

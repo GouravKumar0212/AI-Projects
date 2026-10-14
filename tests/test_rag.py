@@ -1,3 +1,9 @@
+import os
+import sys
+
+# Ensure project root is in sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import pytest
 from rag.chunker import DocumentChunker, Chunk
 from rag.hybrid_search import SimpleBM25, HybridSearcher

@@ -3,7 +3,10 @@ import math
 from typing import List, Dict, Any, Tuple, Optional
 import numpy as np
 
-from rag.chunker import Chunk
+try:
+    from rag.chunker import Chunk
+except ImportError:
+    from .chunker import Chunk
 
 class SimpleBM25:
     """

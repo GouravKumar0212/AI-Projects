@@ -1,7 +1,10 @@
 import re
 from typing import List, Dict, Any, Optional
 
-from rag.chunker import Chunk
+try:
+    from rag.chunker import Chunk
+except ImportError:
+    from .chunker import Chunk
 
 class CrossEncoderReranker:
     """

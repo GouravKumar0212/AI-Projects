@@ -1,10 +1,16 @@
 import os
 from typing import List, Dict, Any, Optional
 
-from rag.chunker import DocumentChunker, Chunk
-from rag.hybrid_search import HybridSearcher
-from rag.reranker import CrossEncoderReranker
-from rag.generator import CitationGenerator
+try:
+    from rag.chunker import DocumentChunker, Chunk
+    from rag.hybrid_search import HybridSearcher
+    from rag.reranker import CrossEncoderReranker
+    from rag.generator import CitationGenerator
+except ImportError:
+    from .chunker import DocumentChunker, Chunk
+    from .hybrid_search import HybridSearcher
+    from .reranker import CrossEncoderReranker
+    from .generator import CitationGenerator
 
 class RAGPipeline:
     """
